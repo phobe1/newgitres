@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.i18n.encoding" value="UTF-8"/>
+<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+<constant name="struts.custom.i18n.resources" value="message"></constant>
+  <package name="default" extends="struts-default">
+    <action name="login" class="usersAction" method="login">
+       <result>loginSuccess.jsp</result>
+       <result name="input">index.jsp</result>
+    </action>
+    <action name="addUsers" class="usersAction" method="addUsers">
+        <result type="redirectAction">queryList</result>
+       <result name="input">/addUsers.jsp</result>
+    </action>
+    <action name="queryList" class="usersAction" method="queryList">
+        <result>/queryList.jsp</result>
+    </action>
+  </package>
+  
+</struts>    
