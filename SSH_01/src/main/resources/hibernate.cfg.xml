@@ -14,5 +14,4 @@
 		<property name="myeclipse.connection.profile">mysql</property>
 		<mapping resource="cn/bdqn/entity/Users.hbm.xml" />
 	</session-factory>
-
 </hibernate-configuration>
